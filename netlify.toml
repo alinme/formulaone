@@ -1,6 +1,6 @@
 [build]
   base = "apps/nextjs"
-  command = "bun install && bun run build"
+  command = "cd ../.. && bun install && cd apps/nextjs && bun run build"
   publish = "out"
 
 [build.environment]
