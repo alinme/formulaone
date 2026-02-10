@@ -2,6 +2,7 @@
 # https://docs.railway.app/config-as-code/reference
 
 [build]
+builder = "NIXPACKS"
 buildCommand = "bun install && bun run build:nextjs"
 
 [deploy]

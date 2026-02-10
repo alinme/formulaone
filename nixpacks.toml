@@ -1,0 +1,4 @@
+# Override install so lockfile doesn't have to be frozen (e.g. after adding scripts in package.json)
+# https://docs.railway.app/builds/nixpacks
+[phases.install]
+cmds = ["bun install"]
