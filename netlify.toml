@@ -1,11 +1,7 @@
 [build]
-  # Base directory = Next.js app so the plugin finds .next in the working dir
   base = "apps/nextjs"
   command = "bun install && bun run build"
-  # Do not set publish — @netlify/plugin-nextjs manages it
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
