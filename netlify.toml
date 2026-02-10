@@ -1,7 +1,8 @@
 [build]
-  # Build from repo root so workspace deps install correctly; Next.js app lives in apps/nextjs
-  command = "bun install && bun run build --filter=@saasfly/nextjs"
-  publish = ".netlify"
+  # Base directory = Next.js app so the plugin finds .next in the working dir
+  base = "apps/nextjs"
+  command = "bun install && bun run build"
+  # Do not set publish — @netlify/plugin-nextjs manages it
 
 [build.environment]
   NODE_VERSION = "18"
