@@ -1,0 +1,149 @@
+/* F1 Fonts */
+@font-face {
+  font-family: "Formula1";
+  src: url("/assets/fonts/Formula1-Display-Regular.woff") format("woff"),
+       url("/assets/fonts/Formula1-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formula1";
+  src: url("/assets/fonts/Formula1-Display-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formula1";
+  src: url("/assets/fonts/Formula1-Display-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("/assets/fonts/Titillium-Web-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("/assets/fonts/Titillium-Web-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* F1 design tokens - light mode */
+    --f1-red: #e10600;
+    --f1-red-hover: #ca0500;
+    --f1rd-colour-surface-neutral-surface-neutral-3: 0 0% 96%;
+    --f1-surface: hsl(var(--f1rd-colour-surface-neutral-surface-neutral-3));
+
+    --background: 0 0% 98%;
+    --background-header: 0 0% 100%;
+    --background-footer: 0 0% 96%;
+    --foreground: 0 0% 9%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 9%;
+
+    --primary: 0 100% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 84%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* F1 design tokens - dark mode (#15151e Carbon Black) */
+    --f1rd-colour-surface-neutral-surface-neutral-3: 240 17% 10%;
+    --f1-surface: #15151e;
+
+    --background: 240 17% 10%;
+    --background-header: 240 20% 6%;
+    --background-footer: 240 20% 6%;
+    --foreground: 0 0% 98%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 0 100% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 9%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 25%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  body {
+    min-height: 100vh;
+    color: hsl(var(--foreground));
+    font-family: var(--font-f1, "Formula1"), "Titillium Web", system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: hsl(var(--background));
+  }
+
+  .dark body {
+    background: #15151e;
+  }
+
+  .header-bg {
+    background-color: hsl(var(--background-header));
+  }
+
+  .footer-bg {
+    background-color: hsl(var(--background-footer));
+  }
+
+  .container {
+    @apply max-sm:px-4;
+  }
+}

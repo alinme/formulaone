@@ -1,0 +1,6 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/[lang]/(marketing)/pricing/page": "app/[lang]/(marketing)/pricing/page.js",
+  "/[lang]/(marketing)/page": "app/[lang]/(marketing)/page.js"
+}
