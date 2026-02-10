@@ -3,6 +3,7 @@
 Yes or no, it depends on what you will try to do. Since I don't want to waste your time, be sure to **create an empty draft pull request or open an issue, so we can have a discussion first**. Especially for a large pull request or you don't know if it will be merged or not.
 
 Here are some references:
+## o
 
 ### ✅ Usually accepted
 
