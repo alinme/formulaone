@@ -1,0 +1,8 @@
+# Railway config: build and run Next.js app from monorepo root
+# https://docs.railway.app/config-as-code/reference
+
+[build]
+buildCommand = "bun install && bun run build:nextjs"
+
+[deploy]
+startCommand = "bun run start:nextjs"

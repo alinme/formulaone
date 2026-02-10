@@ -1,7 +1,0 @@
-[build]
-  base = "apps/nextjs"
-  command = "cd ../.. && bun install && cd apps/nextjs && bun run build"
-  publish = "out"
-
-[build.environment]
-  NODE_VERSION = "18"
