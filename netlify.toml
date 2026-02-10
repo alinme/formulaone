@@ -1,5 +1,6 @@
 [build]
-  command = "bun run build"
+  # Build from repo root so workspace deps install correctly; Next.js app lives in apps/nextjs
+  command = "bun install && bun run build --filter=@saasfly/nextjs"
   publish = ".netlify"
 
 [build.environment]
