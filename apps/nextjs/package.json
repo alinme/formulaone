@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "contentlayer2 build && bun with-env next build && cp -r public .next/standalone/apps/nextjs/ && cp -r .next/static .next/standalone/apps/nextjs/.next/",
+    "build": "contentlayer2 build && bun with-env next build && node scripts/copy-standalone-assets.cjs",
     "clean": "git clean -xdf .next .turbo node_modules",
     "dev": "bun with-env next dev",
     "lint": " bun with-env next lint --quiet",

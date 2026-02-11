@@ -1,9 +1,6 @@
 import "~/styles/globals.css";
 
 import { NextDevtoolsProvider } from "@next-devtools/core";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
 import { cn } from "@saasfly/ui";
 import { Toaster } from "@saasfly/ui/toaster";
 
@@ -43,12 +40,6 @@ export default function RootLayout({
             storageKey="f1-theme"
           >
             <NextDevtoolsProvider>{children}</NextDevtoolsProvider>
-            {process.env.NEXT_PUBLIC_VERCEL === "1" && (
-              <>
-                <Analytics />
-                <SpeedInsights />
-              </>
-            )}
             <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
