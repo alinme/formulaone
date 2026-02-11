@@ -20,6 +20,7 @@ const config = {
     // serverActions: true,
   },
   images: {
+    unoptimized: true, // required for standalone: no Image Optimization API
     domains: ["images.unsplash.com", "avatars.githubusercontent.com", "www.twillot.com", "cdnv2.ruguoapp.com", "www.setupyourpay.com"],
   },
   /** We already do linting and typechecking as separate tasks in CI */

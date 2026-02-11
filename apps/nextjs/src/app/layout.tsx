@@ -43,8 +43,12 @@ export default function RootLayout({
             storageKey="f1-theme"
           >
             <NextDevtoolsProvider>{children}</NextDevtoolsProvider>
-            <Analytics />
-            <SpeedInsights />
+            {process.env.NEXT_PUBLIC_VERCEL === "1" && (
+              <>
+                <Analytics />
+                <SpeedInsights />
+              </>
+            )}
             <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
