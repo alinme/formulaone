@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build ",
     "build:nextjs": "turbo build --filter=@saasfly/nextjs",
-    "start:nextjs": "cd apps/nextjs && npx next start",
+    "start:nextjs": "cd apps/nextjs && node .next/standalone/apps/nextjs/server.js",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "dev": "turbo dev --parallel",
